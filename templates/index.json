@@ -9,13 +9,149 @@
  */
 {
   "sections": {
+    "rich_text_A9wWKt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tCAytn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover Your One-Stop <strong>Virtual Supermarket</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_f3kHHb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Browse through our digital shelves and find amazing products across multiple categories - from<br/>                    stylish print-on-demand apparel to must-have accessories.</p>"
+          }
+        },
+        "button_cdw6GB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "Explore Categories",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_tCAytn",
+        "text_f3kHHb",
+        "button_cdw6GB"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_C8aRBJ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_pi8Xaq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fV9xhk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_PwVjjT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_pi8Xaq",
+        "featured_collection_fV9xhk",
+        "featured_collection_PwVjjT"
+      ],
+      "settings": {
+        "title": "Browse Our <strong>Virtual Shelves</strong>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_6eWtCK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LcFLCh": {
+          "type": "column",
+          "settings": {
+            "title": "Quality Products",
+            "text": "<p>All our products are carefully selected to ensure the highest quality standards.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_69kcBA": {
+          "type": "column",
+          "settings": {
+            "title": "Fast Shipping",
+            "text": "<p>We partner with reliable shipping providers to deliver your orders quickly.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ErbA49": {
+          "type": "column",
+          "settings": {
+            "title": "24/7 Support",
+            "text": "<p>Our customer service team is always available to assist you with any questions.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LcFLCh",
+        "column_69kcBA",
+        "column_ErbA49"
+      ],
+      "settings": {
+        "title": "Why Shop at <strong>FuzzyPN</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
         "collection": "all",
         "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "Featured <strong>Products</strong>",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -41,7 +177,7 @@
       "type": "multicolumn",
       "settings": {
         "title": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "See more products",
@@ -52,12 +188,15 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
+    "rich_text_A9wWKt",
+    "collection_list_C8aRBJ",
+    "multicolumn_6eWtCK",
     "featured_collection",
     "multicolumn_UUBUmp"
   ]
