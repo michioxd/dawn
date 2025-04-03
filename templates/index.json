@@ -98,7 +98,7 @@
         "column_LcFLCh": {
           "type": "column",
           "settings": {
-            "title": "Quality Products",
+            "title": "<strong>Quality Products</strong>",
             "text": "<p>All our products are carefully selected to ensure the highest quality standards.</p>",
             "link_label": "",
             "link": ""
@@ -107,7 +107,7 @@
         "column_69kcBA": {
           "type": "column",
           "settings": {
-            "title": "Fast Shipping",
+            "title": "<strong>Fast Shipping</strong>",
             "text": "<p>We partner with reliable shipping providers to deliver your orders quickly.</p>",
             "link_label": "",
             "link": ""
@@ -116,7 +116,7 @@
         "column_ErbA49": {
           "type": "column",
           "settings": {
-            "title": "24/7 Support",
+            "title": "<strong>24/7 Support</strong>",
             "text": "<p>Our customer service team is always available to assist you with any questions.</p>",
             "link_label": "",
             "link": ""
@@ -133,10 +133,10 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
@@ -158,38 +158,19 @@
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
-      }
-    },
-    "multicolumn_UUBUmp": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "See more products",
-        "button_link": "shopify://collections/all",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     }
   },
@@ -197,7 +178,6 @@
     "rich_text_A9wWKt",
     "collection_list_C8aRBJ",
     "multicolumn_6eWtCK",
-    "featured_collection",
-    "multicolumn_UUBUmp"
+    "featured_collection"
   ]
 }
