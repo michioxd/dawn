@@ -74,6 +74,113 @@
       padding-top: 0.5rem;
     }
   }
+
+  .header__collections-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .header__collections-list-item {
+    position: relative;
+    font-size: 1rem;
+    color: inherit;
+    padding: 0.5rem 0.75rem;
+    padding-top: 0;
+    cursor: pointer;
+  }
+  .header__collections-list-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgba(var(--color-foreground), 0.75);
+    z-index: 1;
+    transition: 0.3s;
+  }
+  .header__collections-list-item:hover::before {
+    width: 100%;
+  }
+  .header__collections-list-item a {
+    font-size: 16px;
+    color: rgba(var(--color-foreground), 0.75);
+    text-decoration: none;
+
+  }
+  .header__collections-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: 0.3s;
+    left: 50%;
+    transform: translate(-50%, 5px) rotateX(-20deg) scale(0.95);
+    transform-origin: top;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    max-width: 1200px;
+    max-height: calc(100dvh - 220px);
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .header__collections-list-item:hover .header__collections-dropdown,
+  .header__collections-list-item:focus-within .header__collections-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translate(-50%, 5px) rotateX(0deg) scale(1);
+  }
+  .header__collections-dropdown-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: row;
+  }
+  .header__collections-dropdown-products .product-card-wrapper {
+    flex: 1;
+    height: 100%;
+    min-width: 200px;
+    max-width: calc(50% - 0.5rem);
+  }
+  @media (max-width: 768px) {
+    .header__collections-dropdown-products .product-card-wrapper {
+      max-width: calc(50% - 0.5rem);
+    }
+  }
+  @media (min-width: 769px) {
+    .header__collections-dropdown-products .product-card-wrapper {
+      max-width: calc(20% - 0.8rem);
+    }
+  }
+  .header__collections-dropdown-viewmore {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header__collections-dropdown-viewmore-btn {
+    background: #222;
+    color: rgb(var(--color-button-text)) !important;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .header__collections-dropdown-viewmore-btn:hover {
+    background: #444;
+  }
 </style>
 
 {%- style -%}
@@ -284,6 +391,28 @@
       </a>
     </div>
   </header>
+  <div class="header__collections-list">
+    {% for collection in collections limit: 5 %}
+      <div class="header__collections-list-item">
+        <a href="{{ collection.url }}">{{- collection.title -}}</a>
+        <div class="header__collections-dropdown">
+          <div class="header__collections-dropdown-products">
+            {% for product in collection.products limit: 5 %}
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'square',
+                show_secondary_image: false,
+                lazy_load: false
+              %}
+            {% endfor %}
+          </div>
+          <div class="header__collections-dropdown-viewmore">
+            <a href="{{ collection.url }}" class="header__collections-dropdown-viewmore-btn">View more</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </{{ header_tag }}>
 
 {%- if settings.cart_type == 'notification' -%}
